@@ -1,19 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <h2>front end mentor</h2>
+    </div>
+    <div class="container">
+      <b-row>
+        <b-col>
+          <card status="completed" imgurl="./assets/challenge1.jpg" />
+        </b-col>
+        <b-col>
+          <card status="incomplete" imgurl="https://picsum.photos/600/300/?image=25" />
+        </b-col>
+        <b-col>
+          <card />
+        </b-col>
+        <b-col>
+          <card />
+        </b-col>
+      </b-row>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import card from "./cards";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    card,
+  },
+};
 </script>
 
 <style>
