@@ -7,13 +7,17 @@
         img-alt="Image"
         img-top
         tag="article"
-        style="max-width: 20rem;"
+        style="max-width: 20rem; filter:drop-shadow(0 5px 10px rgba(0,0,0,0.2))"
         class="mb-2"
       >
         <b-card-title>{{cardTitle}}</b-card-title>
         <b-row>
-          <b-button v-bind:href="link" size="sm" variant="primary float-right">live</b-button>
-          <b-button v-bind:href="link" variant="primary float-right " size="sm">Code</b-button>
+          <b-col>
+            <b-button v-bind:href="netlify" size="sm" variant="primary float-center">live</b-button>
+          </b-col>
+          <b-col>
+            <b-button v-bind:href="github" variant="primary float-center " size="sm">Code</b-button>
+          </b-col>
         </b-row>
       </b-card>
     </div>
@@ -23,12 +27,13 @@
         v-bind:img-src="imgurl"
         img-alt="Image"
         img-top
+        style="filter:grayscale(1) "
         tag="article"
-        style="max-width: 20rem;"
         class="mb-2"
       >
         <b-card-title>{{cardTitle}}</b-card-title>
-        <b-button v-bind:href="link" variant="primary">Coming Soon</b-button>
+        <b-card-text>Coming Soon</b-card-text>
+        <b-button v-bind:href="link" variant="primary" disabled>Coming Soon</b-button>
       </b-card>
     </div>
   </div>
@@ -37,7 +42,7 @@
 <script>
 export default {
   name: "card",
-  props: ["imgurl", "status"],
+  props: ["imgurl", "status", "github", "netify"],
 };
 </script>
 <style  scoped>

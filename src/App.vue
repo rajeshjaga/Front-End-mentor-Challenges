@@ -1,33 +1,18 @@
 <template>
   <div id="app">
     <div class="container">
-      <h2>front end mentor</h2>
+      <h2>Front End Mentor Challenges</h2>
     </div>
-    <div class="container">
-      <b-row>
-        <b-col>
-          <card status="completed" imgurl="./assets/challenge1.jpg" />
-        </b-col>
-        <b-col>
-          <card status="incomplete" imgurl="https://picsum.photos/600/300/?image=25" />
-        </b-col>
-        <b-col>
-          <card />
-        </b-col>
-        <b-col>
-          <card />
-        </b-col>
-      </b-row>
-    </div>
+    <pageRoute />
   </div>
 </template>
 
 <script>
-import card from "./cards";
+import pageRoute from "./pages/cardPage";
 export default {
   name: "App",
   components: {
-    card,
+    pageRoute,
   },
 };
 </script>
@@ -40,5 +25,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h2 {
+  margin-bottom: 60px;
 }
 </style>
