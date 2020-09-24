@@ -27,6 +27,7 @@ export default {
   margin-top: 60px;
 }
 h2 {
+  font-weight: 700;
   margin-bottom: 60px;
 }
 </style>
